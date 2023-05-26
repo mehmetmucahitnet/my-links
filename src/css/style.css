@@ -9,6 +9,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: "Poppins", sans-serif;
+  font-size: 16px;
 }
 
 img {
@@ -61,4 +62,29 @@ button {
   bottom: 0;
   right: 0;
   box-shadow: 0 0 0 5px #fff;
+}
+.body-slider__welcome-avatar-detail {
+  margin-top: 40px;
+  text-align: center;
+}
+.body-slider__welcome-avatar-detail h1 {
+  color: #1d1d1d;
+}
+.body-slider__welcome-avatar-detail h2 {
+  color: #7d5fff;
+  font-size: 14px;
+}
+.body-slider__welcome-avatar-detail p {
+  font-size: 12px;
+  color: #1d1d1d;
+  width: 300px;
+  max-width: 100%;
+  margin: 20px auto 0;
+}
+
+.social-accounts {
+  display: flex;
+  justify-content: center;
+  grid-gap: 10px;
+  margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */

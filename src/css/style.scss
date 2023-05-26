@@ -11,6 +11,15 @@ $dark-color: #1d1d1d;
 $radius-full: 9999px;
 $transition: all ease 0.3s;
 
+// font-sizes
+$fs-12: 12px;
+$fs-14: 14px;
+$fs-16: 16px;
+
+// font-weights
+$fw-400: 400;
+$fw-500: 500;
+
 *,
 *::before,
 *::after {
@@ -22,6 +31,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: $poppins;
+  font-size: $fs-16;
 }
 
 img {
@@ -53,6 +63,8 @@ button {
   }
 }
 
+// components
+
 .body-slider {
   max-width: 500px;
   width: 100%;
@@ -79,6 +91,35 @@ button {
         right: 0;
         box-shadow: 0 0 0 5px $white;
       }
+
+      &-detail {
+        margin-top: 40px;
+        text-align: center;
+
+        & h1 {
+          color: $dark-color;
+        }
+
+        & h2 {
+          color: $primary-color;
+          font-size: $fs-14;
+        }
+
+        & p {
+          font-size: $fs-12;
+          color: $dark-color;
+          width: 300px;
+          max-width: 100%;
+          margin: 20px auto 0;
+        }
+      }
     }
   }
+}
+
+.social-accounts {
+  display: flex;
+  justify-content: center;
+  grid-gap: 10px;
+  margin-top: 20px;
 }
