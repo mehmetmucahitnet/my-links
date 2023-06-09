@@ -1,0 +1,22 @@
+{
+  "name": "my-links",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mehmetmucahitnet/my-links.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mehmetmucahitnet/my-links/issues"
+  },
+  "homepage": "https://github.com/mehmetmucahitnet/my-links#readme",
+  "dependencies": {
+    "@notionhq/client": "^2.2.5"
+  }
+}
