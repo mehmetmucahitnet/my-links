@@ -47,6 +47,12 @@ button {
   outline: none;
 }
 
+// scrollbar css
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 // components
 
 .button-icon {
@@ -81,7 +87,7 @@ button {
 
   &__cover {
     position: relative;
-    height: 275px;
+    aspect-ratio: 1 / 1.5;
     border-radius: 5px;
     background-size: cover;
     background-position: center;
@@ -151,8 +157,8 @@ button {
 .body-slider {
   max-width: 500px;
   width: 100%;
-  height: 95vh;
-  box-shadow: 0 0 7px 3px rgba($black, 0.1);
+  height: 100vh;
+  // box-shadow: 0 0 7px 3px rgba($black, 0.1);
 
   &__welcome {
     padding: 88px 30px;
@@ -226,11 +232,5 @@ button {
   .body-slider {
     height: 100vh;
     box-shadow: none;
-  }
-
-  .link-item {
-    &__cover {
-      height: 185px;
-    }
   }
 }

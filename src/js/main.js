@@ -1,6 +1,4 @@
 const swiper = new Swiper(".body-slider", {
-  // Optional parameters
-  // direction: "vertical",
   loop: true,
 
   // If we need pagination

@@ -22,6 +22,10 @@ button {
   outline: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .button-icon {
   display: inline-grid;
   place-items: center;
@@ -53,7 +57,7 @@ button {
 }
 .link-item__cover {
   position: relative;
-  height: 275px;
+  aspect-ratio: 1/1.5;
   border-radius: 5px;
   background-size: cover;
   background-position: center;
@@ -111,8 +115,7 @@ button {
 .body-slider {
   max-width: 500px;
   width: 100%;
-  height: 95vh;
-  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.1);
+  height: 100vh;
 }
 .body-slider__welcome {
   padding: 88px 30px;
@@ -175,8 +178,5 @@ button {
   .body-slider {
     height: 100vh;
     box-shadow: none;
-  }
-  .link-item__cover {
-    height: 185px;
   }
 }/*# sourceMappingURL=style.css.map */
