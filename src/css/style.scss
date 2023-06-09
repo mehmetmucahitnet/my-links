@@ -6,6 +6,7 @@ $black: #000;
 $white: #fff;
 $primary-color: #7d5fff;
 $dark-color: #1d1d1d;
+$carbon: #333333;
 
 // others
 $radius-full: 9999px;
@@ -15,10 +16,12 @@ $transition: all ease 0.3s;
 $fs-12: 12px;
 $fs-14: 14px;
 $fs-16: 16px;
+$fs-25: 25px;
 
 // font-weights
 $fw-400: 400;
 $fw-500: 500;
+$fw-600: 600;
 
 *,
 *::before,
@@ -49,8 +52,8 @@ button {
 .button-icon {
   display: inline-grid;
   place-items: center;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: $radius-full;
   background-color: $white;
   border: 2px solid rgba($primary-color, 0.2);
@@ -63,6 +66,86 @@ button {
   }
 }
 
+.input {
+  border-radius: 5px;
+  border: 2px solid rgba($primary-color, 0.2);
+  background-color: $white;
+  font-size: $fs-14;
+  padding: 20px;
+  width: 100%;
+  outline: none;
+}
+
+.link-item {
+  flex: 0 0 calc(50% - 15px);
+
+  &__cover {
+    position: relative;
+    height: 275px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+
+    & i {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: $fs-25;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba($black, 0.3) 30.17%,
+        rgba($black, 0.5) 50.14%
+      );
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 7px;
+    margin-top: 7px;
+
+    &-title {
+      font-size: $fs-14;
+      color: $dark-color;
+      font-weight: $fw-600;
+    }
+
+    &-desc {
+      font-size: $fs-12;
+      color: $carbon;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  &:nth-child(odd) {
+    transform: translateY(50px);
+  }
+}
+
+.badge {
+  background-color: rgba($primary-color, 0.2);
+  border-radius: 5px;
+  padding: 4px 8px;
+  color: $primary-color;
+  width: fit-content;
+  font-size: $fs-12;
+}
+
 // components
 
 .body-slider {
@@ -73,6 +156,7 @@ button {
 
   &__welcome {
     padding: 88px 30px;
+    overflow-y: auto;
 
     &-avatar {
       position: relative;
@@ -122,4 +206,31 @@ button {
   justify-content: center;
   grid-gap: 10px;
   margin-top: 20px;
+}
+
+.link-items {
+  &-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    grid-row-gap: 30px;
+  }
+
+  &-searchbar {
+    margin-top: 20px;
+    flex: 1 0 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .body-slider {
+    height: 100vh;
+    box-shadow: none;
+  }
+
+  .link-item {
+    &__cover {
+      height: 185px;
+    }
+  }
 }

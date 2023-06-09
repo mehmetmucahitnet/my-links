@@ -25,8 +25,8 @@ button {
 .button-icon {
   display: inline-grid;
   place-items: center;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: 9999px;
   background-color: #fff;
   border: 2px solid rgba(125, 95, 255, 0.2);
@@ -38,6 +38,76 @@ button {
   color: #fff;
 }
 
+.input {
+  border-radius: 5px;
+  border: 2px solid rgba(125, 95, 255, 0.2);
+  background-color: #fff;
+  font-size: 14px;
+  padding: 20px;
+  width: 100%;
+  outline: none;
+}
+
+.link-item {
+  flex: 0 0 calc(50% - 15px);
+}
+.link-item__cover {
+  position: relative;
+  height: 275px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.link-item__cover i {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+}
+.link-item__cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 30.17%, rgba(0, 0, 0, 0.5) 50.14%);
+}
+.link-item__content {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 7px;
+  margin-top: 7px;
+}
+.link-item__content-title {
+  font-size: 14px;
+  color: #1d1d1d;
+  font-weight: 600;
+}
+.link-item__content-desc {
+  font-size: 12px;
+  color: #333333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.link-item:nth-child(odd) {
+  transform: translateY(50px);
+}
+
+.badge {
+  background-color: rgba(125, 95, 255, 0.2);
+  border-radius: 5px;
+  padding: 4px 8px;
+  color: #7d5fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 12px;
+}
+
 .body-slider {
   max-width: 500px;
   width: 100%;
@@ -46,6 +116,7 @@ button {
 }
 .body-slider__welcome {
   padding: 88px 30px;
+  overflow-y: auto;
 }
 .body-slider__welcome-avatar {
   position: relative;
@@ -87,4 +158,25 @@ button {
   justify-content: center;
   grid-gap: 10px;
   margin-top: 20px;
+}
+
+.link-items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  grid-row-gap: 30px;
+}
+.link-items-searchbar {
+  margin-top: 20px;
+  flex: 1 0 100%;
+}
+
+@media (max-width: 991px) {
+  .body-slider {
+    height: 100vh;
+    box-shadow: none;
+  }
+  .link-item__cover {
+    height: 185px;
+  }
 }/*# sourceMappingURL=style.css.map */
